@@ -1,0 +1,614 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: rgb(226, 226, 226);
+}
+nav{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 120px;
+  /* width: 280px; */
+  background: rgb(110, 84, 255);
+  overflow: hidden;
+  transition: 1s;
+}
+nav:hover{
+  width: 280px;
+  transition: 1s;
+}
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  display: table;
+  padding: 10px;
+  transition: 0.5s;
+  border-radius: 12px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+a:hover{
+  background: rgb(255,255,255,0.1);
+}
+a:hover i{
+  color: #4f6bf9;
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: -10;
+}
+
+.container{
+  display: flex;
+}
+
+/* MAin Section */
+#dashboard-section{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  background-color: rgb(115, 117, 245);
+  transition: all 0.5s;
+  /* border: #34AF6D 2px solid; */
+  /* display: none; */
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+#dashboard-section .users{
+  display: flex;
+  width: 100%;
+}
+
+#dashboard-section-heading{
+ margin: 10px 10px;
+ font-size: 36px;
+ color: #fff;
+}
+#summary-section{
+  position: relative;
+  width: 100%;
+  /* margin: 20px 0; */
+  display:none;
+  transition: all 0.5s;
+  background-color:rgb(115, 117, 245);
+  /* border: pink 4px solid; */
+}
+
+#view-announcement-section{
+    position: relative;
+    width: 100%;
+    /* margin: 20px 0; */
+    display:none;
+    transition: all 0.5s;
+    background-color:rgb(115, 117, 245);
+    /* border: pink 4px solid; */
+}
+#profile-view-section{
+    position: relative;
+    width: 100%;
+    /* display:flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* margin: 20px 0; */
+    display:none;
+    transition: all 0.5s;
+    background-color:rgb(115, 117, 245);;
+    /* border: pink 4px solid; */
+}
+
+#drive-registration-section{
+    position: relative;
+    width: 100%;
+    /* margin: 20px 0; */
+
+    display:none;
+    transition: all 0.5s;
+    background-color:rgb(104, 78, 255)
+    /* border: pink 4px solid; */
+}
+
+#overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 1;
+  display: none;
+  color:white;
+  text-align: center;
+  padding-top: 20%;
+  font-size:40px;
+
+}
+
+
+.users .card{
+  width: 25%;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.filter-icon{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+
+.users .card img{
+  width: 70px;
+  height: 70px;
+  /* border-radius: 50%; */
+  border-radius:8px;
+}
+.users .card h4{
+  text-transform: uppercase;
+}
+.users .card p{
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.users table{
+  margin:  auto;
+}
+.users .per span{
+  padding: 5px;
+  border-radius: 10px;
+  background: rgb(223, 223, 223);
+}
+.users td{
+  font-size: 14px;
+  padding-right: 15px;
+}
+.users .card button{
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #4f6bf9;
+}
+.users .card button:hover{
+  border: 1px solid #fff;
+  background: #738afc;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/*Attendance List serction  */
+.attendance{
+  display: flex;
+  width: 100%;
+  margin-top:10px
+  /* margin-top: auto; */
+  /* border: #34AF6D 3px solid; */
+  /* justify-content: space-around; */
+}
+
+
+.view-annoucement{
+  /* display:flex; */
+  width: 50%;
+  padding: 10px;
+  /* margin-top: 10px; */
+  margin: auto;
+  background: #fff;
+  /* border: #3c0cad 3px solid; */
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.view-annoucement > div{
+
+  margin: 10px;
+  padding: 10px;
+  /* width:45%; */
+  /* height:100px; */
+  /* display: inline-block; */
+  border: #4f6bf9 3px solid;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.view-annoucement > h1{
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  /* border: #34AF6D 3px solid; */
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.upcoming-drives{
+  width: 50%;
+  padding: 10px;
+  /* margin-top: 10px; */
+  margin-left: 20px;
+  /* border: #d45608 3px solid; */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-drives > div{
+  margin: 10px;
+  padding: 10px;
+  /* width:45%; */
+  /* height:100px; */
+  /* display: inline-block; */
+  border: #4f6bf9 3px solid;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.upcoming-drives > h1{
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  /* border: #34AF6D 3px solid; */
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+#profile-view-section >div{
+    margin:auto;
+    width: 80%;
+    height: 88%;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #6749ff;
+  /* border: #b33e10 3px solid; */
+  /* justify-content: space-around; */
+}
+#profile-view-heading {
+    width: 100%;
+    height: 10%;
+    /* background-color: #4f6bf9; */
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#profile-view-section img{
+    position: absolute;
+    top:50px;
+    left:50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    /* padding: 10px; */
+    /* border: #34AF6D 3px solid; */
+    border-radius: 10px;
+    /* box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1); */
+}
+
+#profile-view-section #profile-view{
+    position: relative;
+    /* width: 100%;
+    height: 90%; */
+    /* display: flex;
+    justify-content: space-around; */
+    /* background-color: rgb(134, 209, 55); */
+    border-radius: 0px 0px 10px 10px;
+    /* border: #34AF6D 3px solid; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1); */
+
+}
+  
+
+#profile-view-section #profile-student-details{
+    position: absolute;
+    top:30px;
+    left:250px;
+
+    margin: 10px;
+    padding: 10px;
+    /* border: #34AF6D 3px solid; */
+    border-radius: 10px;
+    /* box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1); */
+}
+#summary-section-heading{
+    width: 100%;
+    height: 10%;
+    /* background-color: #4f6bf9; */
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#view-announcement-heading{
+    width: 100%;
+    height: 10%;
+    /* background-color: #4f6bf9; */
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#drive-registration-heading{
+    width: 100%;
+    height: 10%;
+    /* background-color: #4f6bf9; */
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#drive-registration-table{
+    width: 100%;
+    height: 90%;
+    background-color: #7c68ff;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+#drive-registration-table button{
+    width: 100px;
+    height: 40px;
+    background-color: #74778a;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#drive-registration-table button:hover{
+    background-color: #4f6bf9;
+    cursor: pointer;
+}
+
+#drive-registration-table .drive-registration-table-column{
+   color:black;
+   font-size: 21px;
+}
+
+#view-announcement-container{
+  /* border: #4f6bf9 3px solid; */
+  margin:auto;
+    width: 80%;
+    height: 85%;
+    background-color: #d4cdf9;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#view-announcement-container div{  
+  margin: 10px;
+  padding: 10px;
+  /* width:45%; */
+  /* height:100px; */
+  /* display: inline-block; */
+  /* border: #4f6bf9 3px solid; */
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#view-announcement-container div:hover{
+  background-color: #8c84fd;
+  cursor: pointer;
+}
+#summary-section-container{
+  /* border: #4f6bf9 3px solid; */
+  margin:auto;
+    width: 100%;
+    height: 100%;
+    background-color: #7878ff;
+    border-radius: 0px 0px 10px 10px;
+    /* text-align: center; */
+    padding-top: 5px;
+    color: rgb(16, 14, 14);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#summary-section-container #summary-section-container-profile-view{
+  position: relative;
+  margin:auto;
+  /* margin-top:0; */
+  width: 50%;
+  height: 51%;
+  border-radius: 10px;
+  /* border:#74778a 3px solid; */
+  margin-top: 10px;
+  background-color: #5e42ff;
+
+}
+#summary-section-container #summary-section-container-profile-view #summary-section-container-profile-view-details{
+  position: absolute;
+    top:8px;
+    left:250px;
+    /* margin: 10px; */
+    /* padding: 10px; */
+    /* border: #34AF6D 3px solid; */
+    border-radius: 10px;
+    /* box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1); */
+}
+
+#summary-section-container #summary-section-container-profile-view img{
+  position: absolute;
+  top:50px;
+  left:50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  /* padding: 10px; */
+  /* border: #34AF6D 3px solid; */
+  border-radius: 10px;
+  /* box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1); */
+}
+
+
+#summary-section-container #summary-section-conatiner-drive-registered{
+  margin:auto;
+  width: 50%;
+  height: 35%;
+  border-radius: 10px;
+  /* border:#74778a 3px solid; */
+  margin-top: 10px;
+  background-color: #5e42ff;
+
+}
+
+#summary-section-conatiner-drive-registered-heading{
+  width: 100%;
+  height: 10%;
+  /* background-color: #4f6bf9; */
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  padding-top: 10px;
+  color: rgb(226, 226, 255);
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#drive-registered-table{
+  width: 100%;
+  height: 90%;
+  /* background-color: #6982fc; */
+  border-radius: 0px 0px 10px 10px;
+  text-align: center;
+  /* padding-top: 5px; */
+  color: rgb(32, 29, 29);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#upcoming-drives-image{
+  width:200px;
+  height: 50px;
+}
+#upcoming-drives-image-google{
+  width:150px;
+  height: 50px;
+}
+
+#view-announcemnt-time{
+  font-size: 12px;
+  color: #585bfc;
+  margin-right:4px;
+
+}
+
+#view-announcemnt-title{
+  margin-right:4px;
+  font-size: 20px;
+  color: #74778a;
+  font-weight: bold;
+}
+
+#view-annoucement-body{
+  display: block;
+  font-size: 15px;
+  color: #121212;
+  margin-right:4px;
+}
+
+#summary-section-profile-span,#profile-student-details-span{
+  font-size: 15px;
+  color: #eee5e5;
+  margin-right:4px;
+}
+
+#drive-registered-table-columns{
+  color: #d8d7d7;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#user-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+
+  margin-right: 10px;
+
+}
